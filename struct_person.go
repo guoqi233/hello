@@ -31,4 +31,14 @@ func main() {
 	pers3 := &Person{"Chris", "Woodward"}
 	upPerson(pers3)
 	fmt.Printf("The name of the person is %s %s\n", pers3.firstName, pers3.lastName)
+	pers3.Change()
+	fmt.Printf("The name of the person is %s %s\n", pers3.firstName, pers3.lastName)
+}
+
+func (person *Person) Change() {
+	person.firstName = strings.ToLower(person.firstName)
+}
+
+func Change() {
+
 }

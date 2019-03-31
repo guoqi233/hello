@@ -2,12 +2,12 @@ package main
 
 import "fmt"
 
-func main()  {
+func main() {
 	fmt.Println(split("hello, world!", 15))
 }
 
-func split(str string, i int)(str1, str2 string)  {
-	if i > len(str){
+func split(str string, i int) (str1, str2 string) {
+	if i > len(str) {
 		return
 	}
 	slice := make([]byte, len(str))

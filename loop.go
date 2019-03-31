@@ -40,7 +40,7 @@ func main() {
 	//	fmt.Println(msg)
 	//}
 
-	w , h := 20, 10
+	w, h := 20, 10
 	temp := strings.Repeat("*", w) + "\n"
 	content := strings.Repeat(temp, h)
 	fmt.Println(content)
@@ -53,23 +53,23 @@ func main() {
 	What(1, slice)
 }
 
-func MaxMin(x int, y int)(max int, min int){
-	if x > y{
+func MaxMin(x int, y int) (max int, min int) {
+	if x > y {
 		max, min = x, y
-	}else {
+	} else {
 		max, min = y, x
 	}
 	return
 }
 
-func Switch(x *int, y *int){
+func Switch(x *int, y *int) {
 	var temp int
 	temp = *x
 	*x = *y
 	*y = temp
 }
 
-func What( a int, li []int){
+func What(a int, li []int) {
 	fmt.Println(a)
 	fmt.Println(li)
 }

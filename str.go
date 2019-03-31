@@ -1,11 +1,11 @@
 package main
 
 import (
-	"strings"
 	"fmt"
+	"strings"
 )
 
-func main(){
+func main() {
 	//var str1 = "hello"
 	//var str2 = "world!"
 	//var a = 0x10
@@ -24,25 +24,22 @@ func main(){
 	//		fmt.Println(index, string(runeValue))
 	//	}
 	//}
-	fmt.Println(strings.Map(replace(32), str))
+	fmt.Println(strings.Map(replace(0), str))
 }
 
-
-
-func IsAscii(c rune) rune{
-	if c > 255{
+func IsAscii(c rune) rune {
+	if c > 255 {
 		return 0
 	}
 	return c
 }
 
-func replace(c rune)(func(ch rune) rune){
+func replace(c rune) func(ch rune) rune {
 	return func(ch rune) rune {
-		if ch > 255{
+		if ch > 255 {
 			return c
-		}else {
+		} else {
 			return ch
 		}
 	}
 }
-

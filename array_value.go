@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main(){
+func main() {
 	var arr1 = []int{0}
 	var arr2 = arr1
 
@@ -16,11 +16,12 @@ func main(){
 
 }
 
-func change_(s []int){
+func change_(s []int) {
 	fmt.Println(s)
 }
 
-func change(arr []int ) {
+func change(arr []int) {
 	arr[0] = 5
 }
+
 // 当数组赋值时，发生了数组内存拷贝。

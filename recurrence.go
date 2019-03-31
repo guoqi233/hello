@@ -6,9 +6,10 @@ import (
 )
 
 const LIM = 100
+
 var fibs [LIM]uint64
 
-func main(){
+func main() {
 	//for i := 0; i < 100; i++{
 	//	result := fibonacci(i)
 	//	fmt.Printf("fibonacci(%d) is: %d\n", i, result)
@@ -24,23 +25,23 @@ func main(){
 	fmt.Printf("longCalculation took this amount of time: %s\n", delta)
 }
 
-func fibonacci(n int) (res int){
-	if n <= 1{
+func fibonacci(n int) (res int) {
+	if n <= 1 {
 		res = 1
-	}else {
+	} else {
 		res = fibonacci(n-1) + fibonacci(n-2)
 	}
 	return
 }
 
-func fibonacciCache(n int) ( res uint64 ) {
-	if fibs[n] != 0{
+func fibonacciCache(n int) (res uint64) {
+	if fibs[n] != 0 {
 		res = fibs[n]
 		return
 	}
 	if n <= 1 {
 		res = 1
-	}else {
+	} else {
 		res = fibonacciCache(n-1) + fibonacciCache(n-2)
 	}
 	fibs[n] = res

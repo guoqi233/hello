@@ -2,16 +2,16 @@ package main
 
 import "fmt"
 
-func main()  {
+func main() {
 	var sl1 = make([]byte, 5, 5)
 	//var sl2 = []byte{'a', 'b'}
 	fmt.Println(cap(sl1[1:3]), sl1)
 }
-func fun1()  {
+func fun1() {
 	var arr1 [6]int
 	var slice1 = arr1[2:5]
 	var slice2 = &arr1
-	for index, value := range arr1{
+	for index, value := range arr1 {
 		fmt.Printf("Slice at %d is %d\n", index, value)
 	}
 
@@ -28,13 +28,13 @@ func fun1()  {
 	fmt.Printf("The capacity of slice2 is %d\n", cap(slice2))
 }
 
-func fun2()  {
+func fun2() {
 	var slice1 = make([]int, 10)
-	for index, _ := range slice1{
+	for index, _ := range slice1 {
 		slice1[index] = 5 * index
 	}
 
-	for index, value := range slice1{
+	for index, value := range slice1 {
 		fmt.Printf("Slice at %d is %d\n", index, value)
 	}
 	fmt.Printf("\nThe length of slice1 is %d\n", len(slice1))

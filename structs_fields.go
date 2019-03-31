@@ -13,11 +13,10 @@ type Person struct {
 }
 
 func main() {
-	var head *Person
+	var head *PersonPerson
 	var tail *Person
 	var a = 5
 	for a > 0 {
-		//ms := new(Person)
 		var ms Person
 		general(&ms)
 
@@ -30,31 +29,17 @@ func main() {
 		tail = &ms
 		a -= 1
 	}
-	//fmt.Println(&head)
-	//head := new(Person)
-	//var tail = head
-	//head.next = nil
-	//general(head)
-	//
-	//a := 4
-	//for a > 0{
-	//	ms := new(Person)
-	//	general(ms)
-	//	tail.next = ms
-	//	tail = ms
-	//	a -= 1
-	//}
 
 	for i := head; i != nil; i = i.next {
 		fmt.Printf("The name is: %s\n", i.name)
-		fmt.Printf("The name is: %d\n", i.age)
-		fmt.Printf("The name is: %f\n", i.height)
-		fmt.Println(*i, &i)
+		fmt.Printf("The age is: %d\n", i.age)
+		fmt.Printf("The height is: %f\n", i.height)
+		fmt.Println(*i)
 	}
 }
 
 func general(p *Person) {
 	p.age = rand.Intn(100)
 	p.name = "name"
-	p.height = 1.71
+	p.height = rand.Float32() + 1.0
 }
